@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Quizportal::Application.config.secret_key_base = 'b851806c8d733229a3d01781ab0f6ae4df996464976d2c4c06fa31824fb5069c8e3b6c9fc347f976bc5249a263d9e0bf3dabbc2697a67a7506198a7f48280e43'
+Quizportal::Application.config.secret_key_base = '48b209a3073ddd674091df39b05a0f16cca99fe2a16b8833da30574a42f1b461464569b7fa6c9c36e9d28c7a1eda0fcb506bc55cff661162175a2d403988f524'
