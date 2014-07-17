@@ -1,5 +1,3 @@
-window.Quizportal = Ember.Application.create()
-
 #= require ./store
 #= require_tree ./models
 #= require_tree ./controllers
@@ -10,4 +8,3 @@ window.Quizportal = Ember.Application.create()
 #= require_tree ./routes
 #= require ./router
 #= require_self
-
