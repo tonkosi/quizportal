@@ -1,3 +1,4 @@
+window.Quizportal = Ember.Application.create()
 #= require ./store
 #= require_tree ./models
 #= require_tree ./controllers
