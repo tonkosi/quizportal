@@ -1,4 +1,22 @@
 <header>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigacija">Toggle</button>
+        <div class="navbar-brand">{{#link-to 'index'}}Quizportal{{/link-to}}</div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navigacija">
+        <ul class="nav navbar-nav navbar-right">
+          <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+          <li>{{#link-to 'about'}}About{{/link-to}}</li>
+        </ul>  
+      </div>
+
+    </div>
+  </nav>
+<!--
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -11,7 +29,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div> -->
 </header>
 <div>
   application
