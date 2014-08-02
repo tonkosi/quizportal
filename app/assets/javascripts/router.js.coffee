@@ -1,5 +1,9 @@
 # For more information see: http://emberjs.com/guides/routing/
 
+Quizportal.Router.reopen({
+  location: 'history'
+});
+
 Quizportal.Router.map ->
   @route "/",
     path: "/index"
@@ -7,5 +11,3 @@ Quizportal.Router.map ->
     path: "/about"
 
   return
-
-
