@@ -11,29 +11,18 @@
         <ul class="nav navbar-nav navbar-right">
           <li>{{#link-to 'index'}}Home{{/link-to}}</li>
           <li>{{#link-to 'about'}}About{{/link-to}}</li>
+          <li>{{#link-to 'login'}}Login/Register{{/link-to}}
         </ul>  
       </div>
 
     </div>
   </nav>
-<!--
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <div class="navbar-brand">{{#link-to 'index'}}Quizportal{{/link-to}}</div>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li>{{#link-to 'index'}}Home{{/link-to}}</li>
-          <li>{{#link-to 'about'}}About{{/link-to}}</a></li>
-        </ul>
-      </div>
-    </div>
-  </div> -->
 </header>
-<div>
+
+<div class="container">
   application
   {{outlet}}
 </div>
+
 <footer>
 </footer>

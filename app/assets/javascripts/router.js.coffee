@@ -9,5 +9,7 @@ Quizportal.Router.map ->
     path: "/index"
   @route "about",
     path: "/about"
+  @route "login",
+  	path: "/login"
 
   return
