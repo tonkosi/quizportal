@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  scope '/api' do
+    resources :users
+    resources :sessions, only: [ :create, :destroy ]
+  end
+  
   match "/*path" => 'ember#index', via: :all
   root :to => 'ember#index'
 
