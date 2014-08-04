@@ -6,7 +6,9 @@
 #= require quizportal
 
 # for more details see: http://emberjs.com/guides/application/
-window.Quizportal = Ember.Application.create()
+window.Quizportal = Ember.Application.create(
+	LOG_TRANSITIONS: true
+)
 
 
 

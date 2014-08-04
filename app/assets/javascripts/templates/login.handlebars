@@ -2,7 +2,13 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">Login</div>
 		<div class="panel-body">
-			Za ulogirati se
+			<label>
+        {{input valueBinding="email" placeholder="Username"}} 
+      </label>
+      <label>
+        {{input type="password" valueBinding="password" placeholder="Password"}}
+      </label>
+      <button {{action 'submit'}}>Login</button>
 		</div>
 	</div>
 </div>
