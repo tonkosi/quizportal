@@ -11,5 +11,6 @@ Quizportal.Router.map ->
     path: "/about"
   @route "login",
   	path: "/login"
+  @route "register"
 
   return
