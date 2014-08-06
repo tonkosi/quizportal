@@ -1,8 +1,8 @@
 # for more details see: http://emberjs.com/guides/controllers/
 
 Quizportal.LoginController = Ember.Controller.extend(
-  email: "Hello"
-  password: null
+  email: "mihael.liskij@gmail.com"
+  password: "test1234"
   actions:
     submit: ->
       email = @get("email")
@@ -15,8 +15,9 @@ Quizportal.LoginController = Ember.Controller.extend(
       	data: data
       	success: (data) ->
       		console.log( "Sanity check" )
-      		console.log( data )
+      		console.log( data.user )
+      		Quizportal.currentUser = data.user;
+      		console.log( Quizportal )
+      		@transitionToRoute("about")
       })
 )
-
-
