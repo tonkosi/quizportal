@@ -13,6 +13,9 @@ Quizportal.LoginController = Ember.Controller.extend(
       	type: 'POST'
       	url: 'api/sessions'
       	data: data
+      	success: (data) ->
+      		console.log( "Sanity check" )
+      		console.log( data )
       })
 )
 
