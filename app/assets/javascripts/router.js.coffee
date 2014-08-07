@@ -5,8 +5,6 @@ Quizportal.Router.reopen({
 });
 
 Quizportal.Router.map ->
-  @route "/",
-    path: "/index"
   @route "about",
     path: "/about"
   @route "login",
