@@ -7,8 +7,8 @@ Quizportal.Router.reopen({
 Quizportal.Router.map ->
   @route "about",
     path: "/about"
-  @route "login",
-  	path: "/login"
+  @route "login"
+  @route "logout"
   @route "register"
 
   return
