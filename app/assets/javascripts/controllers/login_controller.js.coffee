@@ -15,9 +15,7 @@ Quizportal.LoginController = Ember.Controller.extend(
       	url: 'api/sessions'
       	data: data
       	success: (data) =>
-      		Quizportal.currentUser = data.user
-      		console.log( Quizportal )
-      		@get('controllers.application').set('currentUser', data.user)
+      		Quizportal.session.set( 'currentUser', data.user )
       		@transitionToRoute("index")
       })
 )

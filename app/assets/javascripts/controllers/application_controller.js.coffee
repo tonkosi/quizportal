@@ -2,6 +2,6 @@
 
 Quizportal.ApplicationController = Ember.Controller.extend({
   testVal: "nesto"
-  currentUser: Quizportal.currentUser
+  currentUserBinding: 'Quizportal.session.currentUser'
 })
 
