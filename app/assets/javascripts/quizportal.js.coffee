@@ -1,8 +1,24 @@
 window.Quizportal = Ember.Application.create({
+	initialize: (container, application) ->
+  	$.ajax({
+			type: 'GET'
+			url: 'api/sessions'
+			success: (data) =>
+				if data.success == "failure"
+					return
+				Quizportal.session.set( 'currentUser', data.user )
+		})
 })
 
 Quizportal.session = Ember.Object.create({
   currentUser: null
+  init:  ->
+  	$.ajax({
+			type: 'GET'
+			url: 'api/sessions'
+			success: (data) =>
+				Quizportal.session.set( 'currentUser', data.user )
+		})
 })
 
 #= require ./store
