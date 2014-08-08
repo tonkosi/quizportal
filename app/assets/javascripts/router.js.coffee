@@ -10,5 +10,6 @@ Quizportal.Router.map ->
   @route "login"
   @route "logout"
   @route "register"
+  @route "user"
 
   return

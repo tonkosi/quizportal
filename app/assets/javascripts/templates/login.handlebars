@@ -1,16 +1,17 @@
-<div class="loginPanel">
-	<div class="panel panel-default">
-		<div class="panel-heading">Login {{#link-to 'register'}}(new user?){{/link-to}}</div>
-		<div class="panel-body">
-			<label>
-        {{input valueBinding="email" placeholder="Email"}} 
-      </label>
-      <label>
-        {{input type="password" valueBinding="password" placeholder="Password"}}
-      </label>
-      <button {{action 'submit'}}>Login</button>
+<div class="container">
+	<div class="loginPanel">
+		<div class="panel panel-default">
+			<div class="panel-heading">Login {{#link-to 'register'}}(new user?){{/link-to}}</div>
+			<div class="panel-body">
+				<label>
+	        {{input valueBinding="email" placeholder="Email"}} 
+	      </label>
+	      <label>
+	        {{input type="password" valueBinding="password" placeholder="Password"}}
+	      </label>
+	      <button {{action 'submit'}}>Login</button>
+			</div>
 		</div>
 	</div>
+	{{outlet}}	
 </div>
-
-{{outlet}}
