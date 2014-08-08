@@ -6,11 +6,37 @@
 					Welcome
 				</h1>
 				<p>
-					{{#link-to 'register' class="btn btn-primary"}}REGISTER{{/link-to}}
+					<button class="btn btn-primary" {{action 'showRegistrationForm'}}>REGISTER</button>
 				</p>
 			</div>
 			<div class="col-md-7">
-				{{view Quizportal.RegisterTemplateView}}
+				<div style="display: none" id="registrationForm">
+					{{view Quizportal.RegisterTemplateView}}
+				</div>
+				<div id="previewCarousel" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#previewCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#previewCarousel" data-slide-to="1"></li>
+						<li data-target="#previewCarousel" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+				    <div class="item active" style="height: 200px">
+				      <div class="carousel-caption">
+				      	SLIDE 1
+				      </div>
+				    </div>
+				    <div class="item" style="height: 200px">
+				      <div class="carousel-caption">
+				      	SLIDE 2
+				      </div>
+				    </div>
+				    <div class="item" style="height: 200px">
+				      <div class="carousel-caption">
+				      	SLIDE 3
+				      </div>
+				    </div>
+				  </div>
+				</div>
 			</div>
 		</div>
 	</div>
