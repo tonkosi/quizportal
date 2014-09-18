@@ -1,21 +1,95 @@
+/*
 @import "bootstrap-sprockets";
 @import "bootstrap";
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,600,400,300);
+
+@import "init";
+
+
+$container-width: 80%;
+$container-max-width: 1200px;
+$section-top-bottom-padding: 15px;
+$navbar-height: 100px;
+
+
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+
+
+
+
+.section {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.container {
+  display: block;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: block;
+}
+
+.nav > li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.nav > li a {
+  display: block;
+  text-decoration: none;
+  font-family: Open Sans;
+}
+
+@import "navbar";
+
+@import "buttons";
+
+/*
+testiranje
+*/
+
+.fw-300 {
+  font-weight: 300;
+}
 
 body {
-  padding-top: 70px;
+  height: 2000px;
 }
 
-/* Navbar custom stilovi */
-
-#navigacija > ul > li > .active {
-	color: #fff;
+#banner {
+  height: 500px;
+  background: url('../img/background.jpg') center;
+  background: url('../img/back.jpg') center;
+  background-size: cover;
+  border-bottom: 1px solid #eee;
+  padding-top: 115px;
 }
 
-/* SignIn panel */
-
-.loginPanel {
-	max-width: 400px;
-	position: center;
-	margin-left: auto;
-	margin-right: auto;
+#banner h1 {
+  font-weight: 300;
+  font-size: 36px;
+  margin: 10px 0;
+  color: #333;
 }

@@ -1,0 +1,38 @@
+$btn-border-radius: 4px;
+$btn-blue-color: #4097fc;
+$btn-green-color: #51d466;
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: $btn-border-radius;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.btn-primary,
+.navbar .navbar-nav > li a.btn-primary {
+  background: #4097fc;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  transition: all 0.1s;
+}
+
+.btn-primary:hover,
+.navbar .navbar-nav > li a.btn-primary:hover {
+  background-color: #3d94fc;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, transparent 4%, rgba(0, 0, 0, 0.1) 90%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  border-color: rgba(0, 0, 0, 0.13);
+}
+
+.btn-primary,
+.btn-default {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
+}
