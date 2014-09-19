@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
 	end
 
 	def destroy
-		session[:current_user] = nil;
+		session[:current_user_id] = nil;
 		render :json => { status: "success" }
 	end
 end
