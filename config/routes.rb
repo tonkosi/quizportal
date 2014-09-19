@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   scope '/api' do
     resources :users
+    resources :groups
     resources :sessions, only: [ :index, :create ]
     match "/sessions" => 'sessions#destroy', via: :delete
   end
