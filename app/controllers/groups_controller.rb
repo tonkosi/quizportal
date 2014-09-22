@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: [:show, :edit, :update, :destroy]
+  before_action :set_group, only: [:show, :edit, :update, :destroy, :add_user, :users]
+  before_action :set_user,  only: [:add_user]
 
   # GET /groups
   # GET /groups.json
@@ -61,10 +62,37 @@ class GroupsController < ApplicationController
     end
   end
 
+  # POST /groups/1/users/1
+  def add_user
+    respond_to do |format|
+      if @group.users.exists?( @user )
+        format.html { redirect_to @group, notice: 'User already in group.' }
+        format.json { render json: @group }
+      else
+        @group.users.push( @user )
+        format.html { redirect_to @group, notice: 'User added to group.' }
+        format.json { render json: @group }
+      end
+    end
+  end
+
+  # GET /groups/1/users
+  def users
+    respond_to do |format|
+      format.html { redirect_to @group.users }
+      format.json { render json: @group.users }
+    end
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_group
       @group = Group.find(params[:id])
+    end
+
+    def set_user
+      @user = User.find(params[:user_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

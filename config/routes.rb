@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     resources :groups
     resources :sessions, only: [ :index, :create ]
     match "/sessions" => 'sessions#destroy', via: :delete
+
+    match "/groups/:id/users" => 'groups#users', via: :get
+    match "/groups/:id/users/:user_id" => 'groups#add_user', via: :post
   end
   
   match "/*path" => 'ember#index', via: :all
