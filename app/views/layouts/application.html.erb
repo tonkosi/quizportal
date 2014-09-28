@@ -8,6 +8,40 @@
 </head>
 <body>
 
+<script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        var offset = $("body").scrollTop();
+        var obj = $('.navbar');
+        if (offset > 120) {
+          obj.addClass('navbar-smaller');
+          obj.css('height','');
+          obj.css('background-color', '');
+          $('.navbar .navbar-collapse').css('padding', '8px 0');
+        }
+        else {
+          obj.removeClass('navbar-smaller');
+          obj.css({height: 100-(offset/120 * 36)});
+          obj.css('background-color', 'rgba(68,53,116,'+offset/150+')');
+          $('.navbar .navbar-collapse').css({
+            paddingTop: 25 - offset/120*17,
+            paddingBottom: 25 - offset/120*17
+          });/*
+          $('#banner > *').css({
+            opacity: (1-offset/120*0.6);
+          });*/
+        }
+        
+        /*if (offset > 100) {
+          obj.addClass('navbar-smaller');
+        } else {
+          obj.removeClass('navbar-smaller');
+        }
+        */
+      });
+    });
+</script>
+
 <%= yield %>
 
 </body>

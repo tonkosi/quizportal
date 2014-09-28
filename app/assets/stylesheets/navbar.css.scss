@@ -1,3 +1,4 @@
+$navbar-background-color: #4097fc;
 
 .navbar {
   left: 0;
@@ -15,13 +16,14 @@
   border-color: transparent;
   box-shadow: none;
   background: transparent;
-  background: url('../img/navbar.png') top repeat-x;
+  /*background: darken(#4097fc,25%);*/
 }
 
 .navbar.navbar-smaller {
   height: 66px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  background: #fff;
+  
+  background: #443574;
 }
 
 .navbar .navbar-collapse {
@@ -47,10 +49,12 @@
   margin-right: 15px;
   float: left;
   font-family: Averia Sans Libre;
+  color: #ccc;
 }
 
 .navbar .navbar-brand:hover {
-  color: #51d466;
+  /*color: #51d466;*/
+  color: #fff;
   transition: color 0.1s;
 }
 
@@ -78,13 +82,15 @@
   padding-right: 10px;
   color: rgba(80, 88, 96, 0.8);
   border: 1px solid transparent;
+  color: rgba(245,245,245,0.85);
 }
 
 .navbar .navbar-nav > li a:hover {
-  background: #51d466;
+  background: rgba(245,245,245,0.9);
   border-radius: 3px;
-  color: #fff;
+  color: #436;
   border: 1px solid rgba(0,0,0,0.13);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 4%, rgba(0, 0, 0, 0.1) 90%);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  
 }
