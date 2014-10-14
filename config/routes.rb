@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     match "/groups/:id/users/:user_id" => 'groups#add_user', via: :post
   end
   
+  match "/login" => 'login#index', via: :get
   match "/*path" => 'ember#index', via: :all
   root :to => 'ember#index'
 
