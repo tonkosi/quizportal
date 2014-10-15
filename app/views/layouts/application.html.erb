@@ -2,11 +2,11 @@
 <html>
 <head>
   <title>Quizportal</title>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!--<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>-->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
+
+<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
 
 <script>
     $(document).ready(function() {
@@ -42,6 +42,9 @@
     });
 </script>
 
+</head>
+
+<body>
 <div class="navbar">
   <div class="container">
     <div class="navbar-collapse float-left">
