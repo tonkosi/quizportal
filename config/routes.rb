@@ -15,8 +15,9 @@ Rails.application.routes.draw do
   end
   
   match "/login" => 'login#index', via: :get
-  match "/*path" => 'ember#index', via: :all
-  root :to => 'ember#index'
+  root :to => 'index#index'
+  
+  #match "/*path" => 'ember#index', via: :all
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
