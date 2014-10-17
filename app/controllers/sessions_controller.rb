@@ -14,10 +14,10 @@ class SessionsController < ApplicationController
 		if user && user.authenticate( params[:password] )
 			logger.debug 'Uspio se ulogirati'
 			session[:current_user_id] = user.id;
-			render :json => user
+			redirect_to "/"
 		else
 			logger.debug 'Nije se uspio ulogirati'
-			render :json => { status: "failure" }
+			redirect_to :controller => 'login', :action => 'index', :email => params[:email]
 		end
 	end
 

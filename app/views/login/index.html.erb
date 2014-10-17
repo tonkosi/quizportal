@@ -6,7 +6,7 @@
 				<div class="panel-body">
 			        <!-- {{input valueBinding="email" placeholder="Email"}} -->
 			      <%= label_tag(:email, "Email:") %>
-			      <%= text_field_tag(:email) %>
+			      <%= text_field_tag(:email, params[:email]) %>
 			      <%= label_tag(:password, "Password:" ) %>
 			      <%= password_field_tag(:password) %>
 			        <!-- {{input type="password" valueBinding="password" placeholder="Password"}} -->
