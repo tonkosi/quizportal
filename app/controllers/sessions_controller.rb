@@ -23,6 +23,6 @@ class SessionsController < ApplicationController
 
 	def destroy
 		session[:current_user_id] = nil;
-		render :json => { status: "success" }
+		redirect_to "/"
 	end
 end

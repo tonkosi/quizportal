@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   end
   
   match "/login" => 'login#index', via: :get
+  
   root :to => 'index#index'
   
   #match "/*path" => 'ember#index', via: :all

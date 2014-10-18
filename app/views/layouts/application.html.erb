@@ -55,7 +55,12 @@
       <ul class="navbar-nav nav">
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="/login">Login</a></li>
+          <% if session[:current_user_id] %>
+            <li><a href="/user"> <%= User.find( session[:current_user_id] ).name.to_s %> </a></li>
+            <li><%= button_to "Logout", "/api/sessions", method: :delete %></li>
+          <% else %>
+            <li><a href="/login">Login</a></li>
+          <% end %>
       </ul>
     </div>
   </div>
