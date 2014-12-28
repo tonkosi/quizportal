@@ -11,7 +11,7 @@ $navbar-background-color: #4097fc;
   border-bottom: 1px solid rgba(200, 210, 220, 0.7);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
   z-index: 2100;
-  transition: height 0.1s;
+  /*transition: height 0.1s;*/
   
   border-color: transparent;
   box-shadow: none;
@@ -20,20 +20,20 @@ $navbar-background-color: #4097fc;
 }
 
 .navbar.navbar-smaller {
-  height: 66px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  box-shadow: 0 0 5px rgba(60, 60, 60, 0.15);
   
-  background: #443574;
+ /* background: #443574;*/
 }
 
 .navbar .navbar-collapse {
   padding: 25px 0;
   display: inline;
-  transition: padding 0.1s;
+  /*transition: padding 0.1s;*/
 }
 
 .navbar.navbar-smaller .navbar-collapse {
-  padding: 8px 0;
+  padding: 5px 0;
 }
 
 .navbar .navbar-brand {
@@ -58,6 +58,19 @@ $navbar-background-color: #4097fc;
   transition: color 0.1s;
 }
 
+.navbar .navbar-nav > li a {
+  transition: color 0.1s;
+}
+.navbar.navbar-smaller .navbar-nav > li a {
+  color: #888;
+}
+
+.navbar.navbar-smaller .navbar-nav > li a:hover {
+  background: none;
+  box-shadow: none;
+  color: #413071;
+  border-color: transparent;
+}
 
 
 .navbar .navbar-nav {
