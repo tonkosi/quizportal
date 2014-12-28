@@ -37,9 +37,26 @@
         
       });*/
 
+      var $obj = $('.navbar');
+  
+      if ($('body').hasClass('homepage') == false) {
+        navbarState = 1;
+                  $obj.stop().animate({
+            height: '60px'
+          }, 1);
+          $('.navbar-layer1').stop().slideDown(1);
+          $('.navbar .navbar-collapse').stop().animate({
+            paddingTop: '5px',
+            paddingBottom: '5px'
+          }, 1);
+          $('.navbar').delay(1).addClass('navbar-smaller');
+      }
+
       $(window).scroll(function() {
+        if ($('body').hasClass('homepage') == false) return;
+
         var offset = $('body').scrollTop();
-        var $obj = $('.navbar');
+        
 
         if (offset > 150 && navbarState == 0) {
           navbarState = 1;
@@ -73,7 +90,12 @@
 
 </head>
 
-<body>
+<% if request.env['PATH_INFO'] == '/' %>
+  <body class="homepage">
+<% else %>
+  <body>
+<%end %>
+
 
 <div class="navbar">
 <div class="navbar-layer1"></div>

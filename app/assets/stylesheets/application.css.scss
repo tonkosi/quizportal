@@ -76,6 +76,11 @@ testiranje
 
 body {
   height: 2000px;
+  padding-top: 60px;
+}
+
+body.homepage {
+  padding-top: 0px;
 }
 
 #banner {
@@ -121,3 +126,4 @@ body {
   background: #fff;
   height: 60px;
 }
+
