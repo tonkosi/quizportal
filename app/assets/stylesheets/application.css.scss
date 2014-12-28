@@ -79,11 +79,29 @@ body {
 }
 
 #banner {
-  height: 500px;
-  background: url('/images/bg.png') center;
-  background-size: cover;
+  position: relative;
+  height: 550px;
+  background: url('/images/bnr-background.png');
   border-bottom: 1px solid #eee;
-  padding-top: 135px;
+  padding: 0;
+}
+
+
+#banner .banner-layer1,
+#banner .banner-layer2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+
+#banner .banner-layer1 {
+  background-image: url('/images/bnr-lyr1.png');
+}
+
+#banner .banner-layer2 {
+  background-image: url('/images/bnr-lyr2.png');
 }
 
 #banner h1 {
@@ -91,4 +109,15 @@ body {
   font-size: 36px;
   margin: 10px 0;
   color: #333;
+}
+
+.navbar-layer1 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  height: 60px;
 }
