@@ -3,7 +3,8 @@ class SessionsController < ApplicationController
 		if session[:current_user_id]
 			user = User.find( session[:current_user_id] )
 			logger.debug session[:current_user_id]
-			render :json => user
+			redirect_to "/"
+#			render :json => user
 		else
 			render :json => { status: "failure" }
 		end

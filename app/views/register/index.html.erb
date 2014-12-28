@@ -1,0 +1,12 @@
+<div class="container" id="banner">
+	<div class="section">
+		<center>
+			<%= form_for :user, url: '/api/users' do |f| %>
+				Name: <%= f.text_field :name %>
+				Email: <%= f.text_field :email %>
+				Password: <%= f.password_field :password %>
+				<%= f.submit( 'Register' ) %>
+			<% end %>
+		</center>
+	</div>
+</div>
