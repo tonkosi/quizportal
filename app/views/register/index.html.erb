@@ -1,5 +1,47 @@
-<div class="container" id="banner">
-	<div class="section">
+<div class="section" style="background: #f4f4f4;">
+	<div class="container">
+		<h1 style="color: #666">Register</h1>
+	</div>
+</div>
+
+
+
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col" style="width: 40%; margin-left: 30%;">
+
+
+        <%= form_for :user, url: '/api/users', :html => {:class => 'form'} do |f| %>
+          <p style="color: #888; font-style: italic;">You have an account? <span style="font-weight: 600;"><%= link_to "Sign in", login_path %></span></p>
+          
+          <hr />
+
+          <%= label_tag(:name, "Name:") %>
+          <%= text_field_tag 'name', nil, :class => 'form-control' %>
+          <%= label_tag(:email, "Email:") %>
+          <%= text_field_tag 'email', nil, :class => 'form-control' %>
+          <%= label_tag(:password, "Password:" ) %>
+          <%= password_field_tag 'password', nil, :class => 'form-control' %>
+          <%= submit_tag("Register", :class => 'form-control') %>
+
+          <hr />
+
+          <a href="" class="btn btn-primary">Google login</a>
+          <a href="" class="btn btn-primary">Facebook login</a>
+        
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<div class="section">
+	<div class="container">
 		<center>
 			<%= form_for :user, url: '/api/users' do |f| %>
 				Name: <%= f.text_field :name %>
@@ -10,3 +52,4 @@
 		</center>
 	</div>
 </div>
+-->

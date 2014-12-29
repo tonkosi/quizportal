@@ -1,24 +1,38 @@
 
-	<div class="section">
-		
-		<h1>Ulogiraj se</h1>
-
-		<center>
-
-
+<div class="section" style="background: #f4f4f4;">
+  <div class="container">
+    <h1 style="color: #666;">Login</h1>
+  </div>
+</div>
 
 
-			<%= form_tag('api/sessions') do %>
-				<div class="panel-heading">Login <%= link_to "(new user?)", register_path %></div>
-				<div class="panel-body">
-			        <!-- {{input valueBinding="email" placeholder="Email"}} -->
-			      <%= label_tag(:email, "Email:") %>
-			      <%= text_field_tag(:email, params[:email]) %>
-			      <%= label_tag(:password, "Password:" ) %>
-			      <%= password_field_tag(:password) %>
-			        <!-- {{input type="password" valueBinding="password" placeholder="Password"}} -->
-			      <%= submit_tag("Login") %>
-				</div>
-			<% end %>
-		</center>
-	</div>
+
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col" style="width: 40%; margin-left: 30%;">
+
+
+        <%= form_tag('api/sessions', :class => "form") do %>
+          <p style="color: #888; font-style: italic;">Doesn't have an account? <span style="font-weight: 600;"><%= link_to "Sign up", register_path %></span></p>
+          
+          <hr />
+
+          <%= label_tag(:email, "Email:") %>
+          <%= text_field_tag 'email', params[:email], :class => 'form-control' %>
+          <%= label_tag(:password, "Password:" ) %>
+          <%= password_field_tag 'password', nil, :class => 'form-control' %>
+          <%= submit_tag("Login", :class => 'form-control') %>
+
+          <hr />
+
+          <a href="" class="btn btn-primary">Google login</a>
+          <a href="" class="btn btn-primary">Facebook login</a>
+        
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
